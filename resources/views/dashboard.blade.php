@@ -5,20 +5,20 @@
         </h2>
     </x-slot>
 
-    <div class="flex-1 p-6">
+    <div class="flex-1 p-6 max-sm:w-full">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <!-- Weather Card -->
-            <div class="inline-flex flex-col bg-blue-50 p-4 rounded-lg shadow space-y-4 w-full h-auto relative">
+            <div class="inline-flex flex-col bg-blue-50 p-4 rounded-lg shadow space-y-4 w-full h-auto ">
                 <div class="flex items-center justify-between mb-8">
                     <div class="flex flex-col space-y-1">
                         <p class="text-gray-600 text-xs md:text-sm">03/01/2025 00:28:04</p>
                         <p class="text-gray-400 text-xs md:text-sm">Temperature</p>
                         <p class="text-4xl md:text-6xl font-bold">28°C</p>
                     </div>
-                    <img alt="Weather Icon" class="w-16 h-16 sm:w-24 sm:h-24 md:w-44 md:h-32"
+                    <img alt="Weather Icon" class="w-26 h-24 sm:w-24 sm:h-24 md:w-44 md:h-32"
                         src="/assets/img/vector_matahariawan.png" />
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 relative">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     <div class="bg-white p-2 rounded-lg shadow flex items-center space-x-2">
                         <i class="fas fa-tint text-blue-500 text-xl md:text-2xl"></i>
                         <div class="flex-grow flex justify-between">

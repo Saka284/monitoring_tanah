@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Sensor;
+use App\Models\remoteControll;
 use Illuminate\Http\Request;
 
-class SensorController extends Controller
+class RemoteControllController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('dashboard');
+        return view('remoteControll');
     }
 
     /**
@@ -34,7 +34,7 @@ class SensorController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Sensor $sensor)
+    public function show(remoteControll $remoteControll)
     {
         //
     }
@@ -42,7 +42,7 @@ class SensorController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Sensor $sensor)
+    public function edit(remoteControll $remoteControll)
     {
         //
     }
@@ -50,7 +50,7 @@ class SensorController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Sensor $sensor)
+    public function update(Request $request, remoteControll $remoteControll)
     {
         //
     }
@@ -58,7 +58,7 @@ class SensorController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Sensor $sensor)
+    public function destroy(remoteControll $remoteControll)
     {
         //
     }

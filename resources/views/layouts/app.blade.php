@@ -24,7 +24,7 @@
         @include('layouts.sidebar')
 
         <!-- Content Area -->
-        <div class="flex-1 pl-20">
+        <div class="flex-1 pl-20 max-sm:pl-0">
             @include('layouts.navigation')
 
             <!-- Page Content -->
