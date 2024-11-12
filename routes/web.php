@@ -14,6 +14,8 @@ Route::get('/', function () {
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', [SensorController::class, 'index'])->name('dashboard');
     Route::get('/remoteControll', [RemoteControllController::class, 'index'])->name('remoteControll');
+    Route::get('/chart/{type}', [SensorController::class, 'chart']);
+    Route::get('/getLatestMonitoring', [SensorController::class, 'getLatestMonitoring']);
 });
 
 Route::middleware('auth')->group(function () {

@@ -1,4 +1,4 @@
-<div class="sidebar fixed top-0 left-0 w-20 h-screen flex flex-col items-center bg-green-600 text-white shadow-lg z-50 max-sm:hidden">
+<div class="sidebar fixed top-0 left-0 w-20 h-screen flex flex-col items-center bg-green-400 text-white shadow-lg z-50 max-sm:hidden">
     <!-- Sidebar content -->
     <div class="sidebar-logo mt-4">
         <a href="#">

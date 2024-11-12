@@ -14,6 +14,11 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                'sidebar1': '#2DFFAD',
+                'sidebar2': '#FFF87B',
+                'articveil': '#F9FDFF'
+            },
         },
     },
 

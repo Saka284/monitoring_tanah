@@ -19,6 +19,28 @@ class AuthenticatedSessionController extends Controller
         return view('auth.login');
     }
 
+    public function getToken(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
+
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+            $user = Auth::user();
+            $token = $user->createToken('Personal Access Token')->plainTextToken;
+
+            return response()->json([
+                'message' => 'Token generated successfully',
+                'token' => $token,
+            ], 200);
+        } else {
+            return response()->json([
+                'message' => 'Invalid email or password',
+            ], 401);
+        }
+    }
+
     /**
      * Handle an incoming authentication request.
      */
