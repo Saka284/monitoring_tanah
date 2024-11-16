@@ -16,26 +16,16 @@ class SensorController extends Controller
      */
     public function index()
     {
-        $sensor = Sensor::latest()->first();
+        $sensor = Sensor::orderby('date', 'desc')->get();
         return view('dashboard', compact('sensor'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         try {
             // Validasi data yang masuk
             $validator = Validator::make($request->all(), [
+                'date' => 'nullable|date_format:Y-m-d',
                 'suhu_udara' => 'required|numeric|between:-10,100',
                 'kelembapan_udara' => 'required|numeric|between:0,100',
                 'intensitas_cahaya' => 'required|numeric|min:0',
@@ -75,33 +65,6 @@ class SensorController extends Controller
             return response()->json([
                 'status' => 'error',
                 'message' => $e->getMessage(),
-            ], 500);
-        }
-    }
-
-    public function getLatestMonitoring()
-    {
-        try {
-            $data = Sensor::latest('date')->first();
-
-            if (!$data) {
-                return response()->json([
-                    'status' => 'error',
-                    'message' => 'No data found',
-                ], 404);
-            }
-
-            return response()->json([
-                'status' => 'success',
-                'data' => [
-                    'date' => Carbon::parse($data->date)->format('d/m/Y H:i:s'),
-                ]
-            ], 200);
-        } catch (\Exception $e) {
-            Log::error('Error fetching latest monitoring data: ' . $e->getMessage());
-            return response()->json([
-                'status' => 'error',
-                'message' => 'Terjadi kesalahan saat mengambil data'
             ], 500);
         }
     }
@@ -236,37 +199,5 @@ class SensorController extends Controller
                 'message' => 'Terjadi kesalahan saat mengambil data grafik',
             ], 500);
         }
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Sensor $sensor)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Sensor $sensor)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Sensor $sensor)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Sensor $sensor)
-    {
-        //
     }
 }
