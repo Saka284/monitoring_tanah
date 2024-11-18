@@ -2,7 +2,8 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-4 lg:px-4 flex justify-between items-center h-16">
         <div class="flex items-center">
             @isset($header)
-                <header>
+                <header class="flex items-center">
+                    <img src="assets/img/logo_sidebae.png" alt="Logo Mobile" class="w-10 h-10 mr-2 sm:hidden">
                     <div class="max-w-7xl py-4 px-1 sm:px-2 lg:px-2">
                         {{ $header }}
                     </div>
@@ -36,7 +37,6 @@
                     <!-- Authentication -->
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
-
                         <x-dropdown-link :href="route('logout')"
                             onclick="event.preventDefault();
                                             this.closest('form').submit();">
@@ -64,24 +64,19 @@
     <!-- Responsive Navigation Menu -->
     <div>
         <!-- Overlay Background -->
-        <div x-show="open" 
-             @click="open = false"
-                class="relative inset-0 bg-gray-800 opacity-50 z-40 transition-opacity"></div>
+        <div x-show="open" @click="open = false"
+            class="relative inset-0 bg-gray-800 opacity-50 z-40 transition-opacity"></div>
 
         <!-- Dropdown Menu -->
         <div :class="{ 'block': open, 'hidden': !open }"
             class="hidden sm:hidden absolute top-16 left-0 right-0 mx-auto w-full max-w-md bg-white shadow-lg z-50">
             <div class="pt-2 pb-3 space-y-1">
-                <x-responsive-nav-link 
-                    :href="route('dashboard')" 
-                    :active="request()->routeIs('dashboard')" 
+                <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')"
                     class="block w-full px-4 py-2 text-left text-sm font-medium hover:bg-gray-100 {{ request()->routeIs('dashboard') ? 'text-blue-600 bg-blue-50' : 'text-gray-600' }}">
                     {{ __('Dashboard') }}
                 </x-responsive-nav-link>
-                
-                <x-responsive-nav-link 
-                    :href="route('remoteControll')" 
-                    :active="request()->routeIs('remoteControll')" 
+
+                <x-responsive-nav-link :href="route('remoteControll')" :active="request()->routeIs('remoteControll')"
                     class="block w-full px-4 py-2 text-left text-sm font-medium hover:bg-gray-100 {{ request()->routeIs('remoteControll') ? 'text-blue-600 bg-blue-50' : 'text-gray-600' }}">
                     {{ __('Control') }}
                 </x-responsive-nav-link>
@@ -95,8 +90,7 @@
                 </div>
 
                 <div class="mt-3 space-y-1">
-                    <x-responsive-nav-link 
-                        :href="route('profile.edit')" 
+                    <x-responsive-nav-link :href="route('profile.edit')"
                         class="block w-full px-4 py-2 text-left text-sm font-medium hover:bg-gray-100 {{ request()->routeIs('profile.edit') ? 'text-blue-600 bg-blue-50' : 'text-gray-600' }}">
                         {{ __('Profile') }}
                     </x-responsive-nav-link>
@@ -105,8 +99,7 @@
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
 
-                        <x-responsive-nav-link 
-                            :href="route('logout')" 
+                        <x-responsive-nav-link :href="route('logout')"
                             class="block w-full px-4 py-2 text-left text-sm font-medium hover:bg-gray-100 text-gray-600"
                             onclick="event.preventDefault();
                                             this.closest('form').submit();">

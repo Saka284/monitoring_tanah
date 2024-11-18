@@ -21,7 +21,7 @@
 </head>
 
 <body class="font-sans antialiased">
-    <div class="flex min-h-screen bg-gray-100">
+    <div class="flex min-h-screen bg-[#EEEEEE]">
         <!-- Sidebar -->
         @include('layouts.sidebar')
 

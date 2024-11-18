@@ -16,7 +16,7 @@ class SensorController extends Controller
      */
     public function index()
     {
-        $sensor = Sensor::orderby('date', 'desc')->get();
+        $sensor = Sensor::orderby('date', 'desc')->first();
         return view('dashboard', compact('sensor'));
     }
 

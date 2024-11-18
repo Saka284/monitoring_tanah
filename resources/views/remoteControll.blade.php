@@ -11,7 +11,8 @@
                 <!-- Kolom pertama -->
                 <div class="col-span-1 space-y-4">
                     <!-- Card 1 - Lampu -->
-                    <div class="bg-white overflow-hidden shadow-sm rounded-lg sm:rounded-lg h-52 flex flex-col space-y-4 p-4 lg:p-6">
+                    <div
+                        class="bg-white overflow-hidden shadow-sm rounded-lg sm:rounded-lg h-52 flex flex-col space-y-4 p-4 lg:p-6">
                         <div class="flex justify-between pt-2">
                             <img src="/assets/img/lampu.png" alt="gambar" class="w-10 h-10 lg:w-14 lg:h-14">
                             <label class="flex items-center cursor-pointer">
@@ -32,27 +33,31 @@
 
                     <!-- Card 4 - Kipas Angin -->
                     <div
-                        class="bg-white overflow-hidden shadow-sm rounded-lg sm:rounded-lg h-52 flex flex-col items-center justify-center space-y-4 p-4 lg:p-6">
-                        <img src="/assets/img/fan.png" alt="gambar" class="w-12 h-12 lg:w-14 lg:h-14">
-                        <h1 class="text-sm lg:text-lg font-semibold">Kipas Angin</h1>
-                        <label class="flex items-center cursor-pointer">
-
-                            <div class="relative">
-                                <input type="checkbox" class="hidden" onchange="toggleDevice('Kipas Angin', this)">
-                                <div class="toggle-path bg-gray-200 w-10 h-5 rounded-full shadow-inner"></div>
-                                <div
-                                    class="toggle-circle absolute w-5 h-5 bg-gray-500 rounded-full shadow inset-y-0 left-0 transition-transform duration-200 ease-in-out">
+                        class="bg-white overflow-hidden shadow-sm rounded-lg sm:rounded-lg h-52 flex flex-col space-y-4 p-4 lg:p-6">
+                        <div class="flex justify-between pt-2">
+                            <img src="/assets/img/fan.png" alt="gambar" class="w-10 h-10 lg:w-14 lg:h-14">
+                            <label class="flex items-center cursor-pointer">
+                                <div class="relative">
+                                    <input type="checkbox" class="hidden" onchange="toggleDevice('Kipas Angin', this)">
+                                    <div class="toggle-path bg-gray-200 w-10 h-5 rounded-full shadow-inner"></div>
+                                    <div
+                                        class="toggle-circle absolute w-5 h-5 bg-gray-500 rounded-full shadow inset-y-0 left-0 transition-transform duration-200 ease-in-out">
+                                    </div>
                                 </div>
-                            </div>
-
-                        </label>
+                            </label>
+                        </div>
+                        <div class="flex flex-col flex-grow justify-end">
+                            <h1 class="text-sm lg:text-lg font-semibold">Lampu</h1>
+                            <p class="text-xs">Ruang mayat</p>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Column 2 - Air & Air Conditioner -->
                 <div class="col-span-1 space-y-4">
                     <!-- Card 2 - Air -->
-                    <div class="bg-white overflow-hidden shadow-sm rounded-lg sm:rounded-lg h-52 flex flex-col space-y-4 p-4 lg:p-6">
+                    <div
+                        class="bg-white overflow-hidden shadow-sm rounded-lg sm:rounded-lg h-52 flex flex-col space-y-4 p-4 lg:p-6">
                         <div class="flex justify-between pt-2">
                             <img src="/assets/img/faucet.png" alt="gambar" class="w-10 h-10 lg:w-14 lg:h-14">
                             <label class="flex items-center cursor-pointer">
@@ -73,25 +78,29 @@
 
                     <!-- Card 5 - Air Conditioner -->
                     <div
-                        class="bg-white overflow-hidden shadow-sm rounded-lg sm:rounded-lg h-52 flex flex-col items-center justify-center space-y-4 p-4 lg:p-6">
-                        <img src="/assets/img/air-conditioner.png" alt="gambar" class="w-12 h-12 lg:w-14 lg:h-14">
-                        <h1 class="text-sm lg:text-lg font-semibold">Air Conditioner</h1>
-                        <label class="flex items-center cursor-pointer">
-
-                            <div class="relative">
-                                <input type="checkbox" class="hidden" onchange="toggleDevice('Air Conditioner', this)">
-                                <div class="toggle-path bg-gray-200 w-10 h-5 rounded-full shadow-inner"></div>
-                                <div
-                                    class="toggle-circle absolute w-5 h-5 bg-gray-500 rounded-full shadow inset-y-0 left-0 transition-transform duration-200 ease-in-out">
+                        class="bg-white overflow-hidden shadow-sm rounded-lg sm:rounded-lg h-52 flex flex-col space-y-4 p-4 lg:p-6">
+                        <div class="flex justify-between pt-2">
+                            <img src="/assets/img/air-conditioner.png" alt="gambar" class="w-10 h-10 lg:w-14 lg:h-14">
+                            <label class="flex items-center cursor-pointer">
+                                <div class="relative">
+                                    <input type="checkbox" class="hidden"
+                                        onchange="toggleDevice('Air-Conditioner', this)">
+                                    <div class="toggle-path bg-gray-200 w-10 h-5 rounded-full shadow-inner"></div>
+                                    <div
+                                        class="toggle-circle absolute w-5 h-5 bg-gray-500 rounded-full shadow inset-y-0 left-0 transition-transform duration-200 ease-in-out">
+                                    </div>
                                 </div>
-                            </div>
-
-                        </label>
+                            </label>
+                        </div>
+                        <div class="flex flex-col flex-grow justify-end">
+                            <h1 class="text-sm lg:text-lg font-semibold">Air</h1>
+                            <p class="text-xs">Kamar</p>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Kolom ketiga -->
-                <div class="col-span-2 md:col-span-1 space-y-4">
+                <div class="col-span-2 lg:col-span-1 space-y-4">
                     <!-- Card 3 -->
                     <div class="bg-white overflow-hidden rounded-lg shadow-sm  sm:rounded-lg h-[133px]">
                         <div class="bg-green-600 p-3">

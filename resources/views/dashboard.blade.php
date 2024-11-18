@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
 
-    <div class="flex-1 p-6 max-sm:w-full">
+    <div class="flex-1 p-8 max-sm:w-full">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <!-- Weather Card -->
             <div class="inline-flex flex-col bg-blue-100 p-4 rounded-lg shadow space-y-4 w-full h-auto ">
@@ -165,4 +165,25 @@
     </div>
 </x-app-layout>
 
+<script>
+    // Function to populate hour select
+    function populateHourSelect(elementId) {
+        const select = document.getElementById(elementId);
+        select.innerHTML = '<option value="">Select Hour</option>';
+        for (let i = 0; i < 24; i++) {
+            const hour = i.toString().padStart(2, '0');
+            select.innerHTML += `<option value="${hour}">${hour}:00</option>`;
+        }
+    }
 
+    // Function to populate minute select
+    function populateMinuteSelect(elementId) {
+        const select = document.getElementById(elementId);
+        select.innerHTML = '<option value="">Select Minute</option>';
+        for (let i = 0; i < 60; i+= 10) {
+            const start = i.toString().padStart(2, '0');
+            const end = (i + 9).toString().padStart(2, '0');
+            select.innerHTML += `<option value="${start}-${end}">${start}-${end}</option>`;
+        }
+    }
+</script>

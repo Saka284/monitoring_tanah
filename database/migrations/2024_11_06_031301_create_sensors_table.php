@@ -9,13 +9,13 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up()
     {
         Schema::create('sensors', function (Blueprint $table) {
             $table->id();
             $table->timestamp('date')->nullable();
             $table->float('suhu_udara');
-            $table->float('kelembaban_udara');
+            $table->float('kelembapan_udara');
             $table->float('intensitas_cahaya');
             $table->float('ph_tanah');
             $table->float('suhu_tanah');
@@ -28,7 +28,7 @@ return new class extends Migration
     /**
      * Reverse the migrations.
      */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('sensors');
     }
