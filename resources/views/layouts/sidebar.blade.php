@@ -3,11 +3,12 @@
     <!-- Sidebar content -->
     <div class="sidebar-logo mt-2">
         <a href="#">
-            <img src="assets/img/logo_sidebae.png" alt="Logo" class="w-12 h-12 mb-2">
+            <img src="assets/img/logo_sidebar.png" alt="Logo" class="w-12 h-12 mb-2">
         </a>
+        <!-- ini garis hijau dibawah logo -->
         <hr class="w-full border-t border-green-600 mt-2 mb-6">
     </div>
-
+    <!-- icon dashboard -->
     <div class="sidebar-icon group mb-6">
         <a href="/dashboard"
             class="relative flex items-center justify-center w-12 h-12 bg-green-600 rounded-full transition-all duration-100 group-hover:duration-100 group-hover:rounded-lg group-hover:bg-green-700">
@@ -18,7 +19,7 @@
             </span>
         </a>
     </div>
-
+    <!-- icon control -->
     <div class="sidebar-icon group mb-6">
         <a href="/remoteControll"
             class="relative flex items-center justify-center w-12 h-12 bg-green-600 rounded-full transition-all duration-100 group-hover:duration-100 group-hover:rounded-lg group-hover:bg-green-700">

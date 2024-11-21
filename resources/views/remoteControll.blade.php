@@ -108,6 +108,7 @@
                         </div>
                         <div class="p-4">
                             <!-- Konten card disini -->
+                            <input type="text" id="slider_treshold" name="temperature_treshold" value="" />
                         </div>
                     </div>
                     <!-- Card 6 -->
@@ -117,6 +118,7 @@
                         </div>
                         <div class="p-4">
                             <!-- Konten card disini -->
+                            <input type="text" id="slider_humidity" name="humidity_treshold" value="" />
                         </div>
                     </div>
                     <!-- Card 7 -->
@@ -126,6 +128,7 @@
                         </div>
                         <div class="p-4">
                             <!-- Konten card disini -->
+                            <input type="text" id="slider_tds" name="tds_treshold" value="" />
                         </div>
                     </div>
                 </div>
@@ -151,3 +154,40 @@
         background-color: #fdf9f9;
     }
 </style>
+<script>
+    $("#slider_treshold").ionRangeSlider({
+    skin: "flat",
+    min: 0,
+    max: 100,
+    from: 0,
+    to: 100,
+    type: 'double',
+    prefix: "",
+    grid: true,
+    grid_num: 10
+});
+
+$("#slider_humidity").ionRangeSlider({
+    skin: "flat",
+    min: 0,
+    max: 1000,
+    from: 0,
+    to: 1000,
+    type: 'double',
+    prefix: "",
+    grid: true,
+    grid_num: 10
+});
+
+$("#slider_tds").ionRangeSlider({
+    skin: "flat",
+    min: 0,
+    max: 1000,
+    from: 0,
+    to: 1000,
+    type: 'double',
+    prefix: "",
+    grid: true,
+    grid_num: 10
+});
+</script>
