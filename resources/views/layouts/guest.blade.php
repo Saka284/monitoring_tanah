@@ -23,8 +23,8 @@
             class="flex flex-col items-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-6 justify-center sm:rounded-lg sm:p-8 p-6">
             <!-- Logo -->
             <div class="sm:mr-16">
-                <a href="/">
-                    <x-application-logo class="w-16 h-16 fill-current text-gray-500" />
+                <a href="">
+                    <x-application-logo class="w-16 h-16 fill-current text-gray-500"/>
                 </a>
             </div>
 
